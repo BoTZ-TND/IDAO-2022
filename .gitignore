@@ -4,8 +4,9 @@ __pycache__/
 *$py.class
 
 # Folder
-data/ 
+data/
 tmp/
+example_**/
 
 # C extensions
 *.so
