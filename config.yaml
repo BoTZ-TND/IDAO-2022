@@ -4,7 +4,7 @@ checkpoint_path: './callback/val_mae_00779_0.040351.hdf5'
 
 model:
   epochs: 800
-  batch_size: 128
+  batch_size: 32
   lr: 2e-4 
   cutoff: 4
 
