@@ -7,6 +7,7 @@ __pycache__/
 data/
 tmp/
 example_**/
+__MACOSX/
 
 # C extensions
 *.so
