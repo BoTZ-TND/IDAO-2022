@@ -276,6 +276,11 @@ class CIFData(Dataset):
         target = torch.Tensor([float(target)])
         return (atom_fea, nbr_fea, nbr_fea_idx), target, cif_id
 
+def get_d(dataset, idx):
+    g = dataset.__getitem__(idx)
+    d = Data(x=g[0][0], edge_attr=g[0][1], edge_index=g[0][2], y=g[1])
+    d.__cat_dim__ = 1
+    return d
 
 def gen_dataloaders(data_path, train_size, batch_size):
     dataset = CIFData(data_path)
