@@ -201,8 +201,11 @@ class GATGNN(torch.nn.Module):
             self.linear1    = nn.Linear(reg_h,reg_h)
             self.linear2    = nn.Linear(reg_h,reg_h)
 
-        if self.classification :    self.out  =  Linear(reg_h,2)
-        else:                       self.out  =  Linear(reg_h,1)
+        if self.classification :    
+            self.out  =  Linear(reg_h,2)
+        else:    
+                               
+            self.out  =  Linear(reg_h,1)
 
     def forward(self,data):
         x, edge_index, edge_attr   = data.x, data.edge_index,data.edge_attr

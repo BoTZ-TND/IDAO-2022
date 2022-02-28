@@ -63,10 +63,12 @@ class DATA_normalizer:
         return 10*x
 
     def norm(self, x):
-        return (x - self.mean) / self.std
+        return x/self.std
+        # return (x - self.mean) / self.std
 
     def denorm(self, x):
-        return x * self.std + self.mean
+        return x*self.std
+        # return x * self.std + self.mean
 
 
 class METRICS:
